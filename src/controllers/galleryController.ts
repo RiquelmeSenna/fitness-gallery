@@ -12,3 +12,9 @@ export const createGallery: RequestHandler = async (req, res) => {
         res.json({ error: 'Galeria sem titulo' })
     }
 }
+
+export const getGalleries: RequestHandler = async (req, res) => {
+    const galleries = await galleryService.getGalleries()
+
+    res.json({ list: galleries })
+}
