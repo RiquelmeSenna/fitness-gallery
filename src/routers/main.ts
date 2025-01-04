@@ -9,3 +9,4 @@ mainRouter.get('/ping', (req, res) => {
 
 mainRouter.post('/galleries', galleryController.createGallery)
 mainRouter.get('/galleries', galleryController.getGalleries)
+mainRouter.get('/gallery/:id', galleryController.getGallery)

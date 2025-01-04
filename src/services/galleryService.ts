@@ -27,3 +27,9 @@ export const getGalleries = async () => {
 
     return galleriesWithThumb
 }
+
+export const getGallery = async (id: number) => {
+    const gallery = await prisma.gallery.findFirst({ where: { id } })
+
+    return gallery
+}
